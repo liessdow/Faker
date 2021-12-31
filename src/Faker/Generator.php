@@ -462,6 +462,14 @@ use Psr\Container\ContainerInterface;
  *
  * @method string name($gender = null)
  *
+ * @property string $maleName
+ *
+ * @method string maleName()
+ *
+ * @properyString $femaleName
+ *
+ * @method string femaleName()
+ *
  * @property string $firstName
  *
  * @method string firstName($gender = null)

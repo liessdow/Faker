@@ -79,6 +79,16 @@ final class PersonTest extends TestCase
         self::assertContains($this->faker->name('female'), ['Jane Doe']);
     }
 
+    public function testMaleName()
+    {
+        self::assertContains($this->faker->maleName(), ['John Doe']);
+    }
+
+    public function testFemaleName()
+    {
+        self::assertContains($this->faker->femaleName(), ['Jane Doe']);
+    }
+
     protected function getProviders(): iterable
     {
         yield new Person($this->faker);

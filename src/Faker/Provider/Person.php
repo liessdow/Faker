@@ -60,6 +60,28 @@ class Person extends Base
     }
 
     /**
+     * @return string
+     *
+     * @example 'John Doe'
+     */
+    public function maleName()
+    {
+        $format = static::randomElement(static::$maleNameFormats);
+        return $this->generator->parse($format);
+    }
+
+    /**
+     * @return string
+     *
+     * @example 'Jane Doe'
+     */
+    public function femaleName()
+    {
+        $format = static::randomElement(static::$femaleNameFormats);
+        return $this->generator->parse($format);
+    }
+
+    /**
      * @param string|null $gender 'male', 'female' or null for any
      *
      * @return string
